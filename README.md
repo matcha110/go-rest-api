@@ -1,13 +1,13 @@
 # go-rest-api
 
-##golangのCRUD勉強用リポジトリ
-###backend
+golangのCRUD勉強用リポジトリ
+## backend
 Go
 Echo
 
-###frontend
+## frontend
 React
 Typescript
 
-###db
+## db
 postgresSQL
