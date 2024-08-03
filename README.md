@@ -1,13 +1,11 @@
 # go-rest-api
 
-golangのCRUD勉強用リポジトリ
+golangでCRUD(Todoアプリ)
 ## backend
-Go
-Echo
+Go(Echo)
 
 ## frontend
-React
-Typescript
+Typescript(Typescript)
 
 ## db
 postgresSQL
