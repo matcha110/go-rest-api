@@ -9,4 +9,8 @@ GO_ENV=dev go run .
 以下に読み替える
 $env:GO_ENV = "dev"; go run .
 
-
+# 開発用の確認時
+docker(db)の起動
+migrateを行う
+backendの起動
+frontendの起動
