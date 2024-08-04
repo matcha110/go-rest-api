@@ -5,7 +5,7 @@ golangでCRUD(Todoアプリ)
 Go(Echo)
 
 ## frontend
-Typescript(Typescript)
+Typescript(React)
 
 ## db
 postgresSQL
