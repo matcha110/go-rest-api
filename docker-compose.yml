@@ -5,11 +5,11 @@ services:
     ports:
       - 5434:5432
     environment:
-      POSTGRES_USER: udemy
-      POSTGRES_PASSWORD: udemy
-      POSTGRES_DB: udemy
+      POSTGRES_USER: todo
+      POSTGRES_PASSWORD: todo
+      POSTGRES_DB: todo
     restart: always
     networks:
-      - lesson
+      - backend
 networks:
-  lesson:
+  backend:

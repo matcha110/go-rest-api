@@ -11,12 +11,15 @@ import (
 )
 
 func NewDB() *gorm.DB {
+	// "GO_ENV"はコマンドで指定
 	if os.Getenv("GO_ENV") == "dev" {
 		err := godotenv.Load()
 		if err != nil {
 			log.Fatalln(err)
 		}
 	}
+
+	//　各情報は.envにて指定
 	url := fmt.Sprintf("postgres://%s:%s@%s:%s/%s",
 		os.Getenv("POSTGRES_USER"),
 		os.Getenv("POSTGRES_PW"),
