@@ -35,6 +35,7 @@ func (tu *taskUsecase) GetAllTasks(userId uint) ([]model.TaskResponse, error) {
 			Title:     v.Title,
 			CreatedAt: v.CreatedAt,
 			UpdatedAt: v.UpdatedAt,
+			Deadline:  v.Deadline,
 		}
 		resTasks = append(resTasks, t)
 	}
@@ -51,6 +52,7 @@ func (tu *taskUsecase) GetTaskById(userId uint, taskId uint) (model.TaskResponse
 		Title:     task.Title,
 		CreatedAt: task.CreatedAt,
 		UpdatedAt: task.UpdatedAt,
+		Deadline:  task.Deadline,
 	}
 	return resTask, nil
 }
@@ -67,6 +69,7 @@ func (tu *taskUsecase) CreateTask(task model.Task) (model.TaskResponse, error) {
 		Title:     task.Title,
 		CreatedAt: task.CreatedAt,
 		UpdatedAt: task.UpdatedAt,
+		Deadline:  task.Deadline,
 	}
 	return resTask, nil
 }
@@ -83,6 +86,7 @@ func (tu *taskUsecase) UpdateTask(task model.Task, userId uint, taskId uint) (mo
 		Title:     task.Title,
 		CreatedAt: task.CreatedAt,
 		UpdatedAt: task.UpdatedAt,
+		Deadline:  task.Deadline,
 	}
 	return resTask, nil
 }

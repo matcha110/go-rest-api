@@ -46,7 +46,11 @@ func (tr *taskRepository) CreateTask(task *model.Task) error {
 }
 
 func (tr *taskRepository) UpdateTask(task *model.Task, userId uint, taskId uint) error {
-	result := tr.db.Model(task).Clauses(clause.Returning{}).Where("id=? AND user_id=?", taskId, userId).Update("title", task.Title)
+	updates := map[string]interface{}{
+		"title":    task.Title,
+		"deadline": task.Deadline,
+	}
+	result := tr.db.Model(task).Clauses(clause.Returning{}).Where("id=? AND user_id=?", taskId, userId).Updates(updates)
 	if result.Error != nil {
 		return result.Error
 	}

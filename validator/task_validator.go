@@ -23,5 +23,15 @@ func (tv *taskValidator) TaskValidate(task model.Task) error {
 			validation.Required.Error("title is required"),
 			validation.RuneLength(1, 10).Error("limited max 10 char"),
 		),
+		// validation.Field(
+		// 	&task.Deadline,
+		// 	validation.NilOrNotEmpty.Error("deadline must be either set or empty"),
+		// 	validation.When(task.Deadline != nil, validation.By(func(value interface{}) error {
+		// 		if (*value.(*time.Time)).Before(time.Now()) {
+		// 			return validation.NewError("validation_deadline_past", "deadline cannot be in the past")
+		// 		}
+		// 		return nil
+		// 	})),
+		// ),
 	)
 }
