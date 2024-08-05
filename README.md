@@ -15,7 +15,7 @@ golangでCRUD(Todoアプリ)
 ## backend
 Go(Echo)
 
-## frontend
+## frontend -> react-todo repository
 Typescript(React)
 
 ## db
