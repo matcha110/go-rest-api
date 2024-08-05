@@ -10,7 +10,8 @@ golangでCRUD(Todoアプリ)
 - Task期限の追加
 - Task期限のソート
 - タグなどの情報追加
-- 検索機能　等
+- 検索機能
+- 自動テストの追加　等
 
 ## backend
 Go(Echo)
